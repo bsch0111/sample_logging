@@ -1,0 +1,18 @@
+[ERROR] 2021-04-13 00:42:34,145 __main__ loging_sample.py : 37 페이지를 찾을 수 없습니다. (logging_example)
+[ERROR] 2021-04-13 00:42:34,146 __main__ loging_sample.py : 42 요청 중에 예외가 발생했습니다 : MissingSchema("Invalid URL '#invalid_url': No schema supplied. Perhaps you meant http://#invalid_url?") (logging_example)
+Traceback (most recent call last):
+  File "loging_sample.py", line 40, in logging_example
+    r = requests.get('#invalid_url', timeout=1)
+  File "/Users/bsch0111/.local/share/virtualenvs/79.log-YVy2WO9t/lib/python3.8/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/Users/bsch0111/.local/share/virtualenvs/79.log-YVy2WO9t/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/bsch0111/.local/share/virtualenvs/79.log-YVy2WO9t/lib/python3.8/site-packages/requests/sessions.py", line 528, in request
+    prep = self.prepare_request(req)
+  File "/Users/bsch0111/.local/share/virtualenvs/79.log-YVy2WO9t/lib/python3.8/site-packages/requests/sessions.py", line 456, in prepare_request
+    p.prepare(
+  File "/Users/bsch0111/.local/share/virtualenvs/79.log-YVy2WO9t/lib/python3.8/site-packages/requests/models.py", line 316, in prepare
+    self.prepare_url(url, params)
+  File "/Users/bsch0111/.local/share/virtualenvs/79.log-YVy2WO9t/lib/python3.8/site-packages/requests/models.py", line 390, in prepare_url
+    raise MissingSchema(error)
+requests.exceptions.MissingSchema: Invalid URL '#invalid_url': No schema supplied. Perhaps you meant http://#invalid_url?
